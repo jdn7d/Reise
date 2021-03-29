@@ -14,5 +14,11 @@ class TripsController < ApplicationController
 
     def destroy
     end
+
+    private 
+
+    def find_user
+        @user = User.find_by(id: params[:user_id])
+    end
     
 end
