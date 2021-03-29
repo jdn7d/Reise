@@ -18,8 +18,8 @@ trip2 = user1.trips.create(title: "West Africa", date: "none", season: "winter",
 trip3 = user2.trips.create(title: "DMV", date: "September", season: "", people: "alone", completed: "no")
 trip4 = user2.trips.create(title: "South East Asia", date: "none", season: "", people: "Laynee", completed: "no")
 
-des1 = trip1.destination.create(city: "Sofia", country: "Bulgaria", length: 4, activities: "", language: "Bulgarian", currency: "Lev")
-des2 = trip1.destination.create(city: "Bucharest", country: "Romania", length: 3, activities: "", language: "Romanian", currency: "Leu")
-des3 = trip2.destination.create(city: "Accra", country: "Ghana", length: 4, activities: "", language: "English and Akan", currency: "Cedi")
-des4 = trip3.destination.create(city: "Washington DC", country: "USA", length: 2, activities: "visit monuments", language: "English", currency: "USD")
-des5 = trip4.destination.create(city: "Bangkok", country: "Tailand", length: 3, activities: "", language: "Thai", currency: "Baht")
+des1 = trip1.destinations.create(city: "Sofia", country: "Bulgaria", length: 4, activities: "", language: "Bulgarian", currency: "Lev")
+des2 = trip1.destinations.create(city: "Bucharest", country: "Romania", length: 3, activities: "", language: "Romanian", currency: "Leu")
+des3 = trip2.destinations.create(city: "Accra", country: "Ghana", length: 4, activities: "", language: "English and Akan", currency: "Cedi")
+des4 = trip3.destinations.create(city: "Washington DC", country: "USA", length: 2, activities: "visit monuments", language: "English", currency: "USD")
+des5 = trip4.destinations.create(city: "Bangkok", country: "Tailand", length: 3, activities: "", language: "Thai", currency: "Baht")
