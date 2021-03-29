@@ -1,5 +1,6 @@
 class DestinationsController < ApplicationController
-
+    before_action :find_trip 
+    
     def index 
     end
 
@@ -14,6 +15,8 @@ class DestinationsController < ApplicationController
 
     def destroy
     end
+
+    private
     
     def find_trip
         @trip = Trip.find_by(id: params[:trip_id])
