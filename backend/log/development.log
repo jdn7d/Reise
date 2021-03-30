@@ -468,3 +468,54 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 38ms (Views: 23.5ms | ActiveRecord: 4.9ms | Allocations: 8496)
 
 
+Started GET "/users" for ::1 at 2021-03-30 17:02:07 -0500
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 173)
+
+
+Started GET "/home" for ::1 at 2021-03-30 17:02:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/home" for ::1 at 2021-03-30 17:02:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for ::1 at 2021-03-30 17:02:39 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.6ms | Allocations: 197)
+Completed 200 OK in 56ms (Views: 24.1ms | Allocations: 1696)
+
+
+Started GET "/" for ::1 at 2021-03-30 17:04:26 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.1ms | Allocations: 192)
+Completed 200 OK in 23ms (Views: 20.8ms | Allocations: 754)
+
+
+Started GET "/" for ::1 at 2021-03-30 17:04:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 226)
+
+
+Started GET "/" for ::1 at 2021-03-30 17:06:07 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 225)
+
+
+Started GET "/" for ::1 at 2021-03-30 17:06:25 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 226)
+
+
