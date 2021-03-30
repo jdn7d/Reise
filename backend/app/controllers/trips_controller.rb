@@ -1,7 +1,9 @@
 class TripsController < ApplicationController
     before_action :find_user
-    
+
     def index 
+        @trips = Trip.all
+        render json: @trips
     end
 
     def show
