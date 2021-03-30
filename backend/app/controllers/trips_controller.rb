@@ -2,11 +2,13 @@ class TripsController < ApplicationController
     before_action :find_user
 
     def index 
-        @trips = Trip.all
+        @trips = @user.trips
         render json: @trips
     end
 
     def show
+        @trip = @user.trip.find_by(id: params[:id])
+        render json: @trip
     end
     
     def create
