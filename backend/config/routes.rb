@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
 
   post '/login', to: 'auth#create'
-  
+  post '/profile', to: 'auth#profle'
+
 end

@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+    before_action :authorized, only: [:profile]
 
     def create
         user = User.find_by(username: params[:username])
@@ -9,6 +10,10 @@ class AuthController < ApplicationController
             render json: {error: "Incorrect username or password!"}, status: 
             :unauthorized
         end
+    end
+
+    def profile
+       render json: @user
     end
 
 end
