@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
     before_action :find_user
+    before_action :authorized
 
     def index 
         @trips = @user.trips
