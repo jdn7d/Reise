@@ -5,7 +5,8 @@ class Login extends React.Component {
     state = {
         name: '',
         email: '',
-        password: ''
+        password: '',
+        message: ''
     }
 
     handleSubmit = e => {
@@ -30,6 +31,9 @@ class Login extends React.Component {
         return (
             <div id=''>
                 <form onSubmit={this.handleSubmit}>
+
+                    <p style={{color: 'red'}}>{this.state.message}</p>
+
                     <input type='text'
                     onChange = {this.handleChangeName}
                     value= {this.state.name} />
