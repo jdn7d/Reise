@@ -13,7 +13,14 @@ class Login extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
         const {name, email, password } = this.state
-        loginRequest(name, email, password).then(console.log)
+        loginRequest({name, email, password})
+        .then(res => {
+            if (res.error) {
+                this.setState({message: res.error})
+            } else {
+                localStorage.setItem('jwt', res.jwt)
+            }
+        })
     }
 
     
