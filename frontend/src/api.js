@@ -23,7 +23,7 @@ export function loginRequest(credentials) {
 
 export function profileRequest() {
     console.log(authHeaders())
-    return fetch(URL + 'profile', {
+    return fetch(URL + '/profile', {
       headers: authHeaders()
     })
     .then(parseJSON)

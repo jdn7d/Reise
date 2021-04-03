@@ -1,5 +1,5 @@
 import React from 'react'
-import {profileRequest} from '../services/api'
+import {profileRequest} from '../api'
 
 class Profile extends React.Component {
     
@@ -16,4 +16,4 @@ class Profile extends React.Component {
     }
 }
 
-export defualt Profile
+export default Profile
