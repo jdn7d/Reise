@@ -1,5 +1,5 @@
 const URL = 'http://localhost:3000'
-const usersURL = URL + '/users'
+//const usersURL = URL + '/users'
 const parseJSON = res => res.json()
 const loginHeaders = {
     'Accepts': 'application/json',
@@ -7,9 +7,9 @@ const loginHeaders = {
 }
 
 export function loginRequest(credentials) {
-    fetch(URL + './login', {
+    return fetch(URL + '/login', {
         method: 'POST',
-        headers: loginHeaders\
+        headers: loginHeaders,
         body: JSON.stringify(credentials)
     })
     .then(parseJSON)

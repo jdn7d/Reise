@@ -1,4 +1,5 @@
 import React from 'react'
+import { loginRequest } from '../api'
 
 class Login extends React.Component {
     
@@ -11,6 +12,8 @@ class Login extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        const {name, email, password } = this.state
+        loginRequest(name, email, password).then(console.log)
     }
 
     

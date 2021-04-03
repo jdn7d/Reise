@@ -616,3 +616,61 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 32ms (Views: 31.1ms | Allocations: 225)
 
 
+Started POST "/login" for ::1 at 2021-04-01 08:02:00 -0500
+Started POST "/login" for ::1 at 2021-04-01 08:02:00 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#create as */*
+Processing by AuthController#create as */*
+  Parameters: {"_json"=>"asdf", "auth"=>{"_json"=>"asdf"}}
+  Parameters: {"_json"=>"asdf", "auth"=>{"_json"=>"asdf"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 2.7ms | Allocations: 7093)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.username):
+  
+app/controllers/auth_controller.rb:5:in `create'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 3.0ms | Allocations: 29713)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.username):
+  
+app/controllers/auth_controller.rb:5:in `create'
+Started POST "/login" for ::1 at 2021-04-01 08:02:51 -0500
+Processing by AuthController#create as */*
+  Parameters: {"_json"=>"asdf", "auth"=>{"_json"=>"asdf"}}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 401 Unauthorized in 30ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 3307)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2021-04-03 09:14:52 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#create as */*
+  Parameters: {"_json"=>"lkjqlj", "auth"=>{"_json"=>"lkjqlj"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 401 Unauthorized in 58ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 6764)
+
+
+Started POST "/login" for ::1 at 2021-04-03 09:14:56 -0500
+Processing by AuthController#create as */*
+  Parameters: {"_json"=>"lkjqlj", "auth"=>{"_json"=>"lkjqlj"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 401 Unauthorized in 13ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 641)
+
+
