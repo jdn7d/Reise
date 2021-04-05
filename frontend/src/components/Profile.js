@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 //import {profileRequest} from '../api'
-import {getUser} from '../redux/actions'
-
+//import {getUser} from '../redux/actions'
+import { getToken } from '../local-storage'
+import { Redirect} from 'react-router-dom'
 
 class Profile extends React.Component {
     
@@ -11,14 +12,12 @@ class Profile extends React.Component {
         trips: []
     }
 
-    componentDidMount() {
-        this.props.getUser()
-     
-    }
+  
 
     render() {
         return (
             <div>
+                {!getToken() ? <Redirect to="/login" /> : null}
                 {this.props.user.name ? <h1> {this.props.user.name}'s Profile  </h1> : <h1> Loading...</h1>}
             </div>
         )
@@ -32,10 +31,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        getUser: dispatch(getUser())
-    }
-}
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         getUser: dispatch(getUser())
+//     }
+// }
 
 export default connect(mapStateToProps)(Profile)

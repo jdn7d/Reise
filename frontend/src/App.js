@@ -5,19 +5,27 @@ import Profile from "./components/Profile"
 
 //import Trips from "./components/trip"
 import './App.css'
+import {clearToken, getToken} from './local-storage'
 
 function App() {
+
+  const handleLogout = () => {
+    clearToken()
+  }
+
   return (
     <Router>
       <div className="App">
     
         <Switch>
           <Route exact path="/" render={() => <Home/>} />
-
-          <Route exact path="/login" render={() => <Login/>} />
+          <Route exact path="/login" render={routerProps => <Login {...routerProps} />} />
           <Route exact path="/profile" render={() => <Profile/>} />
 
         </Switch>
+
+        {getToken() ? <button oncClick={handleLogout}>Logout</button> : null}
+
       </div>
   
     </Router>

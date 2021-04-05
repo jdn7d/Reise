@@ -1,8 +1,8 @@
 
-export default (state = [], action) => {
+const tripReducer = (state = [], action) => {
     switch (action.type) {
         case "SET_TRIPS": 
-            return action.payload
+            return action.payload || state
         case "ADD_TRIPS":
             return [...state, action.payload]
         case "REMOVE_TRIP":
@@ -11,3 +11,5 @@ export default (state = [], action) => {
             return state
     }
 }
+
+export default tripReducer

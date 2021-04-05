@@ -1033,3 +1033,47 @@ Started GET "/profile" for ::1 at 2021-04-05 11:10:36 -0500
   
 ActionController::RoutingError (No route matches [GET] "/profile"):
   
+Started POST "/login" for ::1 at 2021-04-05 15:33:49 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 195ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1069)
+
+
+Started POST "/login" for ::1 at 2021-04-05 15:39:33 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 167ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1053)
+
+
+Started POST "/login" for ::1 at 2021-04-05 15:39:35 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 165ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 603)
+
+
+Started POST "/login" for ::1 at 2021-04-05 15:44:33 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 165ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 588)
+
+
+Started POST "/login" for ::1 at 2021-04-05 15:44:35 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 164ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 604)
+
+
