@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {profileRequest} from '../api'
+//import {profileRequest} from '../api'
+import {getUser} from '../redux/actions'
+
 
 class Profile extends React.Component {
     
@@ -8,25 +10,23 @@ class Profile extends React.Component {
         name: '',
         trips: []
     }
+
     componentDidMount() {
-        profileRequest()
-        .then(res => {
-            if (!res.error) {
-                this.setState({name: res.name, trips: res.trips})
-            }
-        })
+        this.props.getUser()
+     
     }
 
     render() {
         return (
             <div>
-                {this.state.name ? <h1> {this.state.name}'s Profile  </h1> : <h1> Loading...</h1>}
+                {this.props.user.name ? <h1> {this.props.user.name}'s Profile  </h1> : <h1> Loading...</h1>}
             </div>
         )
     }
 }
 
 const mapStateToProps = state => {
+    const {user, trips} = state
     return{
         user, trips
     }
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        user, trips
+        getUser: dispatch(getUser())
     }
 }
 
