@@ -1221,3 +1221,37 @@ NameError (undefined local variable or method `token' for #<AuthController:0x007
 Did you mean?  @token):
   
 app/controllers/auth_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2021-04-06 12:56:13 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 580ms (Views: 0.7ms | ActiveRecord: 7.0ms | Allocations: 6237)
+
+
+Started POST "/login" for ::1 at 2021-04-06 12:56:17 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "password"=>"[FILTERED]", "auth"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 401 Unauthorized in 19ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 498)
+
+
+Started POST "/login" for ::1 at 2021-04-06 12:56:29 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 561ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 737)
+
+
+Started POST "/login" for ::1 at 2021-04-06 12:56:39 -0500
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]", "auth"=>{"name"=>"Bill", "email"=>"bill@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+Completed 200 OK in 545ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 738)
+
+

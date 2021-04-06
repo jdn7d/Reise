@@ -5,7 +5,7 @@ import Profile from "./components/Profile"
 
 //import Trips from "./components/trip"
 import './App.css'
-import {clearToken, getToken} from './local-storage'
+import {clearToken, getToken} from './services/local-storage'
 
 function App() {
 

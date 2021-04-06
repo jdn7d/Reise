@@ -1,6 +1,6 @@
 import React from 'react'
-import { loginRequest } from '../api'
-
+import { loginRequest } from '../services/api'
+import {connect} from 'react-redux'
 class Login extends React.Component {
     
     state = {
@@ -20,6 +20,7 @@ class Login extends React.Component {
                 this.setState({message: res.error})
             } else {
                 localStorage.setItem('jwt', res.jwt)
+
                 this.props.history.push('/profile')
             }
         })
@@ -66,4 +67,10 @@ class Login extends React.Component {
     }
 }
 
-export default Login
+const mapDispatchToProps = dispatch => {
+    return {
+      setUser: user => dispatch({type: 'SET_USER', payload: user})
+    }
+  }
+
+export default connect(null, mapDispatchToProps)(Login)

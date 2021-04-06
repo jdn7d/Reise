@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 //import {profileRequest} from '../api'
 //import {getUser} from '../redux/actions'
-import { getToken } from '../local-storage'
+import { getToken } from '../services/local-storage'
 import { Redirect} from 'react-router-dom'
 
 class Profile extends React.Component {
