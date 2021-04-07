@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 //import {getUser} from '../redux/actions'
 import { getToken } from '../services/local-storage'
 import { Redirect} from 'react-router-dom'
+import 
 
 class Profile extends React.Component {
     
@@ -37,4 +38,4 @@ const mapStateToProps = state => {
 //     }
 // }
 
-export default connect(mapStateToProps)(Profile)
+export default connect(mapStateToProps)(Trips)
