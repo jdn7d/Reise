@@ -28,3 +28,13 @@ export function profileRequest() {
     })
     .then(parseJSON)
   }
+
+export function TripRequest() {
+    return fetch(URL + '/trips', {
+    
+    })
+    .then(parseJSON)
+}
+
+
+
