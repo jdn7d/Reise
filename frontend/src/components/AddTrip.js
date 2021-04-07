@@ -47,6 +47,9 @@ export class AddTrip extends Component {
         e.preventDefault()
         console.log("submitted")
         this.props.addTrip(this.state)
+        this.setState({
+            name: '',
+        })
     }
 
     render() {
